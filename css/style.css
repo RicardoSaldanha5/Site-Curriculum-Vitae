@@ -1467,8 +1467,8 @@ a {
 .lang-toggle-mobile {
   display: none; /* escondido por defeito */
   position: fixed;
-  top: 18px; /* alinhado verticalmente com os 3 riscos */
-  right: 20px; /* mesmo alinhamento do menu toggle */
+  top: 100px; /* alinhado verticalmente com os 3 riscos */
+  right: 60px; /* mesmo alinhamento do menu toggle */
   width: 36px;
   height: 36px;
   border-radius: 50%;
