@@ -131,6 +131,14 @@ a {
     margin-bottom: var(--spacing-2xl);
 }
 
+
+/* Opcional: ajuste ainda mais fino em ecrãs muito pequenos */
+@media (max-width: 480px) {
+  .nav-brand .logo-text span {
+    transform: translateY(3px); /* desce 3px */
+  }
+}
+
 .section-tag {
     display: inline-block;
     color: var(--primary-blue);
