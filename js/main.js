@@ -172,9 +172,9 @@ scrollTopBtn.addEventListener('click', function() {
 
 window.addEventListener('scroll', function() {
     const scrolled = window.scrollY;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+    const bg = document.querySelector('.hero-background');
+    if (bg) {
+        bg.style.transform = `translateY(${scrolled * 0.3}px)`;
     }
 });
 
