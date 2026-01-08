@@ -1539,11 +1539,6 @@ a {
 @media (max-width: 768px) {
   .lang-toggle-mobile {
     display: flex;
-  }
-}
-@media (max-width: 768px) {
-  .lang-toggle-mobile {
-    display: flex;
     top: 14px;
     right: 68px;
   }
