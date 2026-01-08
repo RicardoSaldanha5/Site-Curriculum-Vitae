@@ -1461,14 +1461,14 @@ a {
   box-shadow: var(--shadow-md);
 }
 /* ========================================
-   Botão inglés
+   BOTÃO DE IDIOMA - VERSÃO MOBILE
    ======================================== */
-   /* Botão de idioma em mobile - posicionado absolutamente */
+
 .lang-toggle-mobile {
-  display: none; /* escondido por defeito */
+  display: none; /* Escondido por defeito */
   position: fixed;
-  top: 100px; /* alinhado verticalmente com os 3 riscos */
-  right: 60px; /* mesmo alinhamento do menu toggle */
+  top: 100px;
+  right: 64px; /* Posicionado à esquerda dos 3 riscos (não em cima) */
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -1480,10 +1480,67 @@ a {
   font-size: 1rem;
   text-decoration: none;
   box-shadow: var(--shadow-sm);
-  z-index: 1001; /* acima da navbar */
+  z-index: 1001;
   transition: var(--transition-base);
 }
 
+.lang-toggle-mobile:hover {
+  background: var(--primary-blue);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Tooltip */
+.lang-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: var(--gray-900);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  pointer-events: none;
+}
+
+.lang-toggle-mobile:hover .lang-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Setinha do tooltip */
+.lang-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid var(--gray-900);
+}
+
+/* Esconde tooltip em dispositivos touch */
+@media (hover: none) {
+  .lang-tooltip {
+    display: none !important;
+  }
+}
+
+/* Mostrar apenas em mobile */
+@media (max-width: 768px) {
+  .lang-toggle-mobile {
+    display: flex;
+  }
+}
 .lang-toggle-mobile:hover {
   background: var(--primary-blue);
   color: white;
@@ -1498,12 +1555,7 @@ a {
     .timeline::before {
         left: 30px;
     }
-    
-    .timeline-item {
-        grid-template-columns: 1fr;
-        padding-left: 80px;
-    }
-    
+      
     .timeline-item:nth-child(even) .timeline-content,
     .timeline-item:nth-child(odd) .timeline-content {
         grid-column: 1;
