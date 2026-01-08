@@ -1539,7 +1539,7 @@ a {
 
 @media (max-width: 480px) {
   .lang-toggle-mobile {
-    top: 12px;
+    top: 1px;
     right: 64px;
   }
 }
