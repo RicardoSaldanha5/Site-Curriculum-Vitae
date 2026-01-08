@@ -1761,7 +1761,7 @@ a {
 
 /* Tooltip opcional (aparece ao passar o rato) */
 .download-badge-timeline::after {
-  content: "Descarregar comprovativo";
+  content: "Descarregar Certificado";
   position: absolute;
   top: 100%;
   left: 50%;
