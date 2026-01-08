@@ -249,21 +249,7 @@ a {
     border-radius: var(--radius-full);
     transition: var(--transition-base);
 }
-@media (max-width: 768px) {
-  .navbar {
-    height: 60px; /* define altura explícita */
-  }
 
-  .navbar .container {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-  /* Corrige o hero para não ser sobreposto */
-  .hero {
-    padding-top: 60px; /* igual à altura da navbar */
-  }
-}
 
 /* ========================================
    HERO SECTION
@@ -1487,7 +1473,24 @@ a {
         --spacing-3xl: 4rem;
         --spacing-2xl: 3rem;
     }
-    
+    /* ========================================
+   AJUSTE MOBILE: EVITAR SOBREPOSIÇÃO NO HERO
+   ======================================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 60px;
+  }
+
+  .hero {
+    padding-top: 60px; /* empurra o conteúdo para baixo da navbar */
+  }
+
+  /* Opcional: ajustar o avatar se ainda estiver muito alto */
+  .hero-content {
+    padding-top: 1rem; /* reduz o padding-top em mobile */
+  }
+}
     .nav-menu {
         position: fixed;
         top: 70px;
