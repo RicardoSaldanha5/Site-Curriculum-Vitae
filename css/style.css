@@ -1528,7 +1528,11 @@ a {
         --spacing-3xl: 4rem;
         --spacing-2xl: 3rem;
     }
-    
+    @media (max-width: 768px) {
+  .lang-toggle-mobile {
+    display: flex;
+  }
+}
     /* ========================================
    AJUSTE MOBILE: EVITAR SOBREPOSIÇÃO NO HERO
    ======================================== */
