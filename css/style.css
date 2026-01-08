@@ -1541,11 +1541,18 @@ a {
     display: flex;
   }
 }
-.lang-toggle-mobile:hover {
-  background: var(--primary-blue);
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+@media (max-width: 768px) {
+  .lang-toggle-mobile {
+    display: flex;
+    top: 14px;
+    right: 68px;
+  }
+}
+@media (max-width: 480px) {
+  .lang-toggle-mobile {
+    top: 12px;
+    right: 64px;
+  }
 }
 /* ========================================
    RESPONSIVE DESIGN
