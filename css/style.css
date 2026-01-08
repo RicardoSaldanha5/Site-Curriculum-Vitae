@@ -1543,6 +1543,8 @@ a {
     right: 64px;
   }
 }
+
+
 /* ========================================
    RESPONSIVE DESIGN
    ======================================== */
@@ -1719,6 +1721,73 @@ a {
     .publications-grid {
         grid-template-columns: 1fr;
     }
+}
+/* ========================================
+   BOTÃO DE DOWNLOAD NAS CAIXAS DE FORMAÇÃO (TIMELINE)
+   ======================================== */
+
+/* Garante que o conteúdo da timeline é um contexto de posicionamento */
+.timeline-content {
+  position: relative; /* já deveria estar, mas confirma */
+}
+
+.download-badge-timeline {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  z-index: 2;
+  transition: var(--transition-base);
+}
+
+.download-badge-timeline:hover {
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Tooltip opcional (aparece ao passar o rato) */
+.download-badge-timeline::after {
+  content: "Descarregar comprovativo";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: var(--gray-900);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.download-badge-timeline:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Esconde tooltip em dispositivos touch */
+@media (hover: none) {
+  .download-badge-timeline::after {
+    display: none !important;
+  }
 }
 /* ========================================
    PROTEÇÃO CONTRA OVERFLOW HORIZONTAL
