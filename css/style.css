@@ -1461,6 +1461,36 @@ a {
   box-shadow: var(--shadow-md);
 }
 /* ========================================
+   Botão inglés
+   ======================================== */
+   /* Botão de idioma em mobile - posicionado absolutamente */
+.lang-toggle-mobile {
+  display: none; /* escondido por defeito */
+  position: fixed;
+  top: 18px; /* alinhado verticalmente com os 3 riscos */
+  right: 20px; /* mesmo alinhamento do menu toggle */
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  z-index: 1001; /* acima da navbar */
+  transition: var(--transition-base);
+}
+
+.lang-toggle-mobile:hover {
+  background: var(--primary-blue);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+/* ========================================
    RESPONSIVE DESIGN
    ======================================== */
 
