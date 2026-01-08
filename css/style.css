@@ -159,11 +159,6 @@ a {
 /* ========================================
    NAVIGATION
    ======================================== */
-@media (max-width: 768px) {
-  .nav-brand .logo-text span {
-    vertical-align: -0.2em;
-  }
-}
 .navbar {
     position: fixed;
     top: 0;
@@ -254,6 +249,14 @@ a {
     border-radius: var(--radius-full);
     transition: var(--transition-base);
 }
+/* Ajuste do chapéu no logótipo em mobile */
+@media (max-width: 768px) {
+  .nav-brand .logo-text span {
+    display: inline-block;
+    transform: translateY(2px); /* desce 2px */
+  }
+}
+
 
 /* ========================================
    HERO SECTION
