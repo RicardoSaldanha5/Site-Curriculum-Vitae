@@ -1498,19 +1498,7 @@ a {
         --spacing-3xl: 4rem;
         --spacing-2xl: 3rem;
     }
-    @media (max-width: 768px) {
-  /* ... outras regras ... */
-
-  .nav-brand {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm); /* permite espaço entre logo e botão */
-  }
-
-  .lang-toggle {
-    display: flex;
-  }
-}
+    
     /* ========================================
    AJUSTE MOBILE: EVITAR SOBREPOSIÇÃO NO HERO
    ======================================== */
