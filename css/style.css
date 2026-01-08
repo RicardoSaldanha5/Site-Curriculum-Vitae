@@ -1537,7 +1537,6 @@ a {
 
 /* Mostrar apenas em mobile */
 
-}
 @media (max-width: 480px) {
   .lang-toggle-mobile {
     top: 12px;
