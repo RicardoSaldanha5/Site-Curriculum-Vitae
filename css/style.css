@@ -249,14 +249,21 @@ a {
     border-radius: var(--radius-full);
     transition: var(--transition-base);
 }
-/* Ajuste do chapéu no logótipo em mobile */
 @media (max-width: 768px) {
-  .nav-brand .logo-text span {
-    display: inline-block;
-    transform: translateY(2px); /* desce 2px */
+  .navbar {
+    height: 60px; /* define altura explícita */
+  }
+
+  .navbar .container {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  /* Corrige o hero para não ser sobreposto */
+  .hero {
+    padding-top: 60px; /* igual à altura da navbar */
   }
 }
-
 
 /* ========================================
    HERO SECTION
