@@ -1909,6 +1909,12 @@ html, body {
   color: var(--primary-blue-dark);
   box-shadow: var(--shadow-xl);
 }
+/* Ajuste fino de posição do botão de CV */
+.contact-section .btn-cv-download {
+  position: relative;
+  top: -12px;
+  left: 100px;
+}
 /* ========================================
    PRINT STYLES
    ======================================== */
