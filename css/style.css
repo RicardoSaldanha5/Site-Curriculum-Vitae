@@ -1876,7 +1876,9 @@ html, body {
 /* ========================================
    BOTÃO DE DOWNLOAD DO CURRÍCULO
    ======================================== */
-
+.cta-box {
+  text-align: center;
+}
 .btn-cv-download {
   background: white;
   color: var(--primary-blue);
@@ -1891,6 +1893,8 @@ html, body {
   box-shadow: var(--shadow-md);
   transition: var(--transition-base);
   border: 2px solid var(--primary-blue);
+  display: inline-flex;
+  justify-content: center;
 }
 
 .btn-cv-download:hover {
@@ -1916,7 +1920,7 @@ html, body {
 .contact-section .btn-cv-download {
   position: relative;
   top: -12px;
-  left: 100px;
+  
 }
 /* ========================================
    PRINT STYLES
