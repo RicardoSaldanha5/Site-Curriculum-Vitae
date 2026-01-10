@@ -322,6 +322,8 @@ a {
 
 .hero-avatar {
     margin-bottom: var(--spacing-lg);
+    padding-top: 0.875rem;    /* 14px */
+    padding-bottom: 0.875rem;
 }
 
 .avatar-circle {
