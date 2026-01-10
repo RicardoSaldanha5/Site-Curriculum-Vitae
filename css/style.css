@@ -440,6 +440,7 @@ a {
     position: absolute;
     bottom: var(--spacing-xl);
     left: 50%;
+    bottom: 5px; /* era 32px — mais perto do fundo */
     transform: translateX(-50%);
     font-size: 2rem;
     color: rgba(255, 255, 255, 0.7);
